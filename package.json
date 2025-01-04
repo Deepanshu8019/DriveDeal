@@ -4,12 +4,10 @@
   "version": "0.0.0",
   "type": "module",
     "scripts": {
-      "dev": "concurrently \"npm run server\" \"npm run client\"",
-      "build": "vite build",      
+      "dev": "vite",
+      "build": "vite build",
       "lint": "eslint .",
-      "preview": "vite preview",  
-      "client": "vite",           
-      "server": "cd Server && node server.js" 
+      "preview": "vite preview"
     }
   ,
   "dependencies": {
