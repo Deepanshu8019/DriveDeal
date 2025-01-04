@@ -1,0 +1,23 @@
+.my-form input {
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem; 
+  width: 100%; 
+  margin-top: 0.25rem;
+  background-color: #ffffff; 
+  color: #1a202c; 
+  border: 1px solid #e2e8f0; 
+  outline: none; 
+}
+
+.my-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.my-form{
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
