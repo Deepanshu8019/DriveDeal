@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path');
+// const path = require('path');
 const dotenv = require('dotenv')
 const {cloudinaryConnect } = require("./config/cloudinary");
 const {deleteImages} = require("./Controller/deleteCloudImages")
@@ -14,15 +14,15 @@ app.use(cors());
 app.use(router);
 cloudinaryConnect(); 
 
-app.use(express.static(path.join(__dirname, '../dist')));
+// app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/', (req, res) => {
     res.send("Server is running")
 }); 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../dist/index.html'));
+// });
 
 router.post('/api/v1/removeImage', deleteImages);
 
