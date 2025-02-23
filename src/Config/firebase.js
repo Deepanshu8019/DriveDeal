@@ -2,14 +2,15 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDMABWO_MIeMLe4SOLbSnpJn76Szdj5ecM",
-  authDomain: "drivedeal.firebaseapp.com",
-  projectId: "drivedeal",
-  storageBucket: "drivedeal.firebasestorage.app",
-  messagingSenderId: "568145959874",
-  appId: "1:568145959874:web:581f967d81db635ff1945b",
-  measurementId: "G-8CJ1ZFY16T"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
