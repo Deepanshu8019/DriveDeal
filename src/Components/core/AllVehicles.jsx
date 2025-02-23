@@ -13,6 +13,11 @@ function AllVehicles() {
         try{
             const data = await getVehiclesInfo();
             setVehicleData(data);
+
+            fetch(import.meta.env.VITE_APP_BASE_URL)
+            .then((res) => res.text())
+            .then(() => {})
+            .catch((err) => console.error("Error keeping server alive:", err));
             // console.log(data);
         }catch(err){
             console.log("Error while fetching data: ", err);
